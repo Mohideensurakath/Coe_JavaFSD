@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handson4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Workout Planner</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">My Routines</a></li>
+                <li><a href="#">Progress</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="routine-section">
+            <h2>Create Your Routine</h2>
+            <input type="text" id="routine-name" placeholder="Routine Name">
+            <button onclick="addRoutine()">Add Routine</button>
+        </section>
+
+        <section class="routines">
+            <h2>Your Routines</h2>
+            <ul id="routine-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Workout Planner. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

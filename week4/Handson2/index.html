@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handson2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fitness Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Workouts</a></li>
+                <li><a href="#">Progress</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="controls">
+            <h2>Set Your Workout</h2>
+            <label for="exercise-time">Exercise Duration (mins):</label>
+            <input type="range" id="exercise-time" min="5" max="60" value="30" oninput="updateValue('exercise-time', 'exercise-value')">
+            <span id="exercise-value">30</span> min
+
+            <label for="rest-time">Rest Duration (mins):</label>
+            <input type="range" id="rest-time" min="1" max="10" value="2" oninput="updateValue('rest-time', 'rest-value')">
+            <span id="rest-value">2</span> min
+
+            <button onclick="startWorkout()">Start Workout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fitness Tracker. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function updateValue(inputId, valueId) {
+            document.getElementById(valueId).textContent = document.getElementById(inputId).value;
+        }
+
+        function startWorkout() {
+            alert("Workout started! Stay strong!");
+        }
+    </script>
+</body>
+</html>
