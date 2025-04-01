@@ -1,0 +1,110 @@
+/* Cart Container */
+.cart-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Individual Cart Item */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Cart Item Hover Effect */
+.cart-item:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Cart Item Image */
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 5px;
+}
+
+/* Cart Item Name */
+.cart-item h3 {
+    font-size: 18px;
+    color: #333;
+    flex: 1;
+    text-align: left;
+    margin-left: 10px;
+}
+
+/* Price & Quantity */
+.cart-item p {
+    font-size: 16px;
+    color: #666;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Remove Button */
+.cart-item button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Remove Button Hover Effect */
+.cart-item button:hover {
+    background: #cc0000;
+}
+
+/* Total Amount */
+h3.total {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #222;
+}
+
+/* Empty Cart Message */
+p.empty-cart {
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-item h3,
+    .cart-item p {
+        text-align: center;
+        margin: 8px 0;
+    }
+
+    .cart-item img {
+        width: 100px;
+        height: 100px;
+    }
+}

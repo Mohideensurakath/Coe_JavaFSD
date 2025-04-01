@@ -1,0 +1,123 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.logo {
+  color: gold;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+  padding: 8px 12px;
+  border-radius: 5px;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+  color: gold;
+  background: rgba(255, 215, 0, 0.2);
+  transform: scale(1.1);
+}
+
+/* Login & Logout Button */
+.nav-links a[routerLink="/login"],
+.nav-links a[routerLink="/logout"] {
+  background: gold;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 8px 12px;
+  display: inline-block;
+  text-align: center;
+  width: auto;  /* Fixes button width issue */
+  min-width: 80px;  /* Ensures a reasonable button size */
+}
+
+.nav-links a[routerLink="/login"]:hover,
+.nav-links a[routerLink="/logout"]:hover {
+  background: darkgoldenrod;
+}
+
+/* Mobile Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: black;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+  }
+
+  .nav-links li {
+      display: block;
+      padding: 10px;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+
+  /* Show Menu on Click */
+  .nav-links.show {
+      display: flex;
+  }
+}

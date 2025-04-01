@@ -1,0 +1,79 @@
+/* Centering the Form */
+.enquiry-container {
+    width: 400px; /* Adjust width */
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Heading */
+.enquiry-container h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Input Fields */
+form input, 
+form textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+/* Input Focus Effect */
+form input:focus, 
+form textarea:focus {
+    border: 1px solid #ff69b4;
+    outline: none;
+    margin-left: 20px;
+}
+
+/* Submit Button */
+form button {
+    width: 80%;
+    padding: 10px;
+    background: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+form button:hover {
+    background: #d13f88;
+}
+
+/* Thank You Message */
+p {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .enquiry-container {
+        width: 90%;
+        padding: 20px;
+    }
+}
